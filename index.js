@@ -71,47 +71,36 @@ const findDaysInMonth = (month, year) => {
   switch (month) {
     case 1:
       return 'The Month has 31 days';
-      break;
 
     case 3:
       return 'The Month has 31 days';
-      break;
 
     case 5:
       return 'The Month has 31 days';
-      break;
 
     case 7:
       return 'The Month has 31 days';
-      break;
 
     case 8:
       return 'The Month has 31 days';
-      break;
 
     case 10:
       return 'The Month has 31 days';
-      break;
 
     case 12:
       return 'The Month has 31 days';
-      break;
 
     case 4:
       return 'The Month has 30 days';
-      break;
     
     case 6:
       return 'The Month has 30 days';
-      break;
 
     case 9:
       return 'The Month has 30 days';
-      break;
 
     case 11:
       return 'The Month has 30 days';
-      break;
 
     case 2: 
       if (year % 4 == 0) {
@@ -119,7 +108,6 @@ const findDaysInMonth = (month, year) => {
       } else{
         return 'The Month has 28 days';
       }
-      break;
 
     default:
       return `Invalid Month of value ${month}`;
@@ -162,11 +150,14 @@ const calculateResult = (num1, num2, operation) => {
 // Create multiply table multiplying all digits from 2 t0 9 on 1 - 10 and write result in string
 // Compare your result with string in test
 const getMultiplicationTable = () => {
-  for (let i = 2; i < 10; i++) {    
+  let sum = "";
+  for (let i = 2; i < 10; i++) { 
+    sum += `==== ${i} ==== \n`; 
     for (let a = 1; a <= 10; a++) {
-      return `${i} * ${a} = ${a * i} \n`;
+      sum += `${i} * ${a} = ${a * i} \n`;
     }
   }
+  return sum;
 }
 
 module.exports = {
